@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Welcome to the Flame Buddy Sword Assistant!</title>
+    <link rel="stylesheet" href="app.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <pre id="status-message" class="hidden"></pre>
+
+    <p class="instruction">
+      Your sound needs to be on in order to experience the full Flame Buddy and
+      Flame Buddy Sword Assistant experience.
+    </p>
+
+    <p class="instruction">WARNING: FLASHING LIGHTS.</p>
+
+    <div id="fbsa-image-container">
+      <img id="fbsa-image" src="images/fbsa-default.png" />
+      <img id="fbsa-image-error" src="images/fbsa-error.png" class="hidden" />
+      <img id="fbsa-image-active" src="images/fbsa-active.png" class="hidden" />
+    </div>
+
+    <button id="activate-button">Wield Flame Buddy Sword Assistant!</button>
+
+    <audio id="media-player" class="hidden"></audio>
+
+    <script src="index.js"></script>
+  </body>
+</html>

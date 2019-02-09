@@ -1,0 +1,45 @@
+{
+  "name": "flame-buddy-sword-assistant",
+  "version": "1.0.0",
+  "description": "What if there were a magic sword? That was free-to-use, but also primarily made to promote a company and to collect data?",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jimkang/flame-buddy-sword-assistant.git"
+  },
+  "keywords": [
+    "personal assistants",
+    "D&D"
+  ],
+  "author": "Jim Kang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimkang/flame-buddy-sword-assistant/issues"
+  },
+  "homepage": "https://github.com/jimkang/flame-buddy-sword-assistant",
+  "devDependencies": {
+    "async-waterfall": "^0.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.5.0",
+    "collect-in-channel": "^3.0.1",
+    "request": "^2.88.0",
+    "request-body-mover": "^1.0.1",
+    "uglify-es": "^3.1.9"
+  },
+  "dependencies": {
+    "accessor": "^2.0.0",
+    "d3-queue": "^3.0.7",
+    "d3-scale-chromatic": "^1.3.3",
+    "d3-selection": "^1.3.2",
+    "handle-error-web": "^1.0.1",
+    "lodash.curry": "^4.1.1",
+    "probable": "^2.1.2",
+    "route-state": "^1.1.2",
+    "standard-bail": "^2.0.1"
+  }
+}
