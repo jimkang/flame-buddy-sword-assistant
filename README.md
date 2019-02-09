@@ -3,6 +3,8 @@ flame-buddy-sword-assistant
 
 What if there were a magic sword? That was free-to-use, but also primarily made to promote a company and to collect data?
 
+[Try Flame Buddy Sword Assistant for free!](https://jimkang.com/flame-buddy-sword-assistant/)
+
 Installation
 ------------
 
