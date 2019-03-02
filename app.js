@@ -4,7 +4,8 @@ var activateFlow = require('./flows/activate-flow');
 
 (function go() {
   window.onerror = reportTopLevelError;
-  activateButton.addEventListener('click', activateFlow);
+  // Safari needs this.
+  activateButton.addEventListener('click', () => setTimeout(activateFlow));
 })();
 
 function reportTopLevelError(msg, url, lineNo, columnNo, error) {
