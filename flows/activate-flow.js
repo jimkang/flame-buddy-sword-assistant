@@ -13,7 +13,7 @@ function activateFlow() {
   var responseId = randomResponseTable.roll();
   hideAnimations();
   playAudioURL(
-    { url: `audio/${responseId}.ogg` },
+    { url: `audio/${responseId}.mp3` },
     sb(getReadyForEnd, handleError)
   );
   animateFBSAImage(responseId);
