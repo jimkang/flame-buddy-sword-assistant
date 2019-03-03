@@ -1,24 +1,32 @@
-var mediaPlayer = document.getElementById('media-player');
-var fbsaImageActive = document.getElementById('fbsa-image-active');
-var fbsaImageError = document.getElementById('fbsa-image-error');
 var probable = require('probable');
 var tableDef = require('../random-response-table-def');
 var errorResponseIds = require('../error-response-ids');
+var playAudioURL = require('play-audio-url');
+var handleError = require('handle-error-web');
+var sb = require('standard-bail')();
 
 var randomResponseTable = probable.createTableFromSizes(tableDef);
-
-mediaPlayer.addEventListener('ended', hideAnimations);
+var fbsaImageActive = document.getElementById('fbsa-image-active');
+var fbsaImageError = document.getElementById('fbsa-image-error');
 
 function activateFlow() {
   var responseId = randomResponseTable.roll();
-  mediaPlayer.pause();
   hideAnimations();
-  mediaPlayer.src = `audio/${responseId}.ogg`;
-  mediaPlayer.play();
-
+  playAudioURL(
+    { url: `audio/${responseId}.ogg` },
+    sb(getReadyForEnd, handleError)
+  );
   animateFBSAImage(responseId);
 
-  // Huh, not really much "flow" here, eh?
+  function getReadyForEnd({ htmlPlayer }) {
+    if (htmlPlayer) {
+      htmlPlayer.removeEventListener('ended', hideAnimations);
+      htmlPlayer.addEventListener('ended', hideAnimations);
+    } else {
+      // Fake it.
+      setTimeout(hideAnimations, 5000);
+    }
+  }
 }
 
 function animateFBSAImage(responseId) {
