@@ -28,5 +28,7 @@ module.exports = {
     'Unable to connect to Flame Buddy. Check your Elemental Plane of Fire connection and retry',
   asrError: "I didn't catch that. Can you say that again?",
   unsupportedIntent:
-    "I don't know how to do that. Sorry. Would you like to join Flame Buddy to be able to do more with your life?"
+    "I don't know how to do that. Sorry. Would you like to join Flame Buddy to be able to do more with your life?",
+  webTip:
+    'Do you have unsightly giant spider webs cluttering up your life? Well, good news for you! Flame Buddy Sword Assistant can slash them away as easily as a hand brushes away cobwebs. Note that all creatures within flaming webs may suffer burns or other injury. Flame Buddy is not responsible for any loss suffered as a result of the use of Flame Buddy Sword Assistant on webs or any other object or being.'
 };

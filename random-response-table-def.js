@@ -14,5 +14,6 @@ module.exports = [
   [6, 'firmwarePrompt'],
   [4, 'badConnection'],
   [2, 'asrError'],
-  [2, 'unsupportedIntent']
+  [2, 'unsupportedIntent'],
+  [5, 'webTip']
 ];
