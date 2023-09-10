@@ -13,13 +13,15 @@ const audioDir = __dirname + '/../audio';
 const endpointURL = 'https://texttospeech.googleapis.com/v1/text:synthesize';
 
 var responsesById = {
-  sluglike: 'It is a slug-like creature that leaves behind a dangerous trail of fire.',
-  stripes: 'They are black in appearance, with stripes of yellow-reddish gradient looping around their body in a pattern resembling that of flowing lava.',
-  antennae: 'They have two antennae near the top of their cone-shaped bodies.',
-  slime: 'The Pyroclasmic Slooch is also covered in a combustible slime which it leaves behind as it moves.',
-  mucus: 'A species of terrestrial snail coated in flammable mucus instead of the traditional shell.',
-  fires: 'The creature stays lubricated through constant secretion of mucus so that the fires never reach its skin.',
-  plants: 'The most fascinating aspect of these creatures is their instinctive ability to avoid causing widespread fires by carelessly brushing plants.'
+  final: 'SafeSword emergency alert: Dragons are dangerous. Put SafeSword into final mode to give you and your proximal associates better chances at evacuation. Start final mode now?',
+  startFinal: 'SafeSword appreciates your choice of SafeSword and other Gnomonics Industrial Products. Good luck. You have three minutes of protection.',
+  // sluglike: 'It is a slug-like creature that leaves behind a dangerous trail of fire.',
+  // stripes: 'They are black in appearance, with stripes of yellow-reddish gradient looping around their body in a pattern resembling that of flowing lava.',
+  // antennae: 'They have two antennae near the top of their cone-shaped bodies.',
+  // slime: 'The Pyroclasmic Slooch is also covered in a combustible slime which it leaves behind as it moves.',
+  // mucus: 'A species of terrestrial snail coated in flammable mucus instead of the traditional shell.',
+  // fires: 'The creature stays lubricated through constant secretion of mucus so that the fires never reach its skin.',
+  // plants: 'The most fascinating aspect of these creatures is their instinctive ability to avoid causing widespread fires by carelessly brushing plants.'
 }
 
 var q = queue();
@@ -43,7 +45,8 @@ function callTTS(text, done) {
       input: { text },
       //voice: { languageCode: 'en-US', name: 'en-US-Wavenet-D' },
       //audioConfig: { audioEncoding: 'OGG_OPUS', speakingRate: 1.0, pitch: 4.0 }
-      voice: { languageCode: 'en-US', name: 'en-US-Wavenet-H' },
+      // voice: { languageCode: 'en-US', name: 'en-US-Wavenet-H' },
+      voice: { languageCode: 'en-US', name: 'en-US-Neural2-C' },
       audioConfig: { audioEncoding: 'OGG_OPUS', speakingRate: 1.0, pitch: -2.8 }
     }
   };
